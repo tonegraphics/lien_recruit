@@ -10,9 +10,13 @@ class Header extends React.Component {
   }
 
   listItems() {
+    const active = {
+      background: 'white',
+      color: 'aquamarine'
+    }
     const listItems = this.pageList.map((page, index) =>
       <div key={index} className={Style.listItem} id={index}>
-        <Link to="#" className={Style.link} activeClassName={Style.activeLink}>{page}</Link>
+        <Link to="#" className={Style.link} activeStyle={active}>{page}</Link>
       </div>
     );
     return(

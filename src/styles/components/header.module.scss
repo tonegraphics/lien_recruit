@@ -17,7 +17,7 @@
     font-size: 2rem;
     line-height: 3rem;
     width: 400px;
-    padding: 48px 0 48px 48px;
+    padding: 48px;
 }
 
 .listItems {
@@ -43,6 +43,9 @@
     font-weight: bold;
     color: $white;
     text-decoration: none;
+}
+.active {
+    background-color: $accent;
 }
 
 .activeLink {
