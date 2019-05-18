@@ -1,4 +1,4 @@
-@import '../valiable/valiables';
+@import '../variable/variables';
 
  .image {
     background-image: url("../../images/header01.jpg");
@@ -43,7 +43,12 @@
     font-weight: bold;
     color: $white;
     text-decoration: none;
+    &:hover {
+        color: $black;
+        background-color: $accent;
+    }
 }
+
 .active {
     background-color: $accent;
 }

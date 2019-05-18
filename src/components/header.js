@@ -16,7 +16,7 @@ class Header extends React.Component {
     }
     const listItems = this.pageList.map((page, index) =>
       <div key={index} className={Style.listItem} id={index}>
-        <Link to="#" className={Style.link} activeStyle={active}>{page}</Link>
+        <a className={Style.link} href="#">{page}</a>
       </div>
     );
     return(
