@@ -1,0 +1,9 @@
+@import "../variable/_variables.scss";
+
+.headline {
+  text-align: center;
+  h1 {
+    display: inline-block;
+    border-bottom: 8px solid $main;
+  }
+}
