@@ -1,42 +1,30 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Style from "../styles/components/header.module.scss"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.menu = [
+      "りあん", "未来の保育士さんへ", "スタッフインタビュー", "見学", "募集要項", "りあんの魅力", "制度" 
+    ]
+  }
+  render() {
+    return (
+      <header>
+        <div className={Style.image}>
+          <div className={Style.message}>
+            <strong class={Style.text}>
+              夢と誇りを持てる<br />社会のために
+            </strong>
+            
+          </div>
+        </div>
+      </header>
+      
+    );
+  }
 }
 
 export default Header
