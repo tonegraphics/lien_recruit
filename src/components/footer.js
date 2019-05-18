@@ -5,10 +5,10 @@ const Footer = () => (
   <footer className={Styles.footer}>
     <div className={Styles.top}>
       <p>まずはお気軽にお問い合わせ下さい！</p>
-      <div>
-        <a href="#">LINE@</a>
-        <a href="tel:0948-26-8700">Tel: 0948-26-8700</a>
-        <a href="#">Mail</a>
+      <div className={Styles.top__link}>
+        <a className={Styles.line} href="#">LINE@</a>
+        <a className={Styles.tel} href="tel:0948-26-8700">Tel: 0948-26-8700</a>
+        <a className={Styles.mail} href="#">Mail</a>
       </div>
     </div>
     <div className={Styles.under}>
