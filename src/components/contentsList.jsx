@@ -1,12 +1,13 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import Content from './content';
+import Styles from '../styles/components/contentsList.module.scss';
 
 const ContentsList = () => {
   const contents = [
     // CEOの画像がないので仮置き
     {
-      image: 'staff01.jpg',
+      image: 'interview01.jpg',
       title: '未来の保育士さんへ',
       body: 'りあんで働きたい方や興味を持っていただいた方へ向けた、代表からのメッセージです。'
     },
@@ -37,7 +38,7 @@ const ContentsList = () => {
     }
   ];
   return (
-    <div>
+    <div className={Styles.list}>
       { contents.map((content) => {
         return (
           <Content

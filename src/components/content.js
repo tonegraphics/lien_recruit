@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import Image from './image';
 
 const Content = ({image, title, body}) => (
-  <div className={Styles.contents}>
-    <Image filename={image}/>
+  <div className={Styles.content}>
+    <div className={Styles.image}>
+      <Image filename={image} />
+    </div>
     <h3>{title}</h3>
     <p>{body}</p>
   </div>
