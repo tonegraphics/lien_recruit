@@ -201,7 +201,8 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #332F36;
+  background-color: #F2F2F2;
   /* font-family: georgia, serif; */
   font-weight: normal;
   word-wrap: break-word;

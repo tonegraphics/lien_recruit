@@ -21,6 +21,7 @@
     align-items: center;
     a {
       line-height: 64px;
+      font-weight: bold;
       &.line {
         border: 4px solid #00c300;
         color: #00c300;
@@ -29,6 +30,11 @@
         &:visited {
           color: #00c300;
         }
+        &:hover {
+          background-color: #00c300;
+          color: $white;
+          transition: 0.5s;
+        }
       }
       &.tel {
         // padding: 40px;
@@ -36,12 +42,26 @@
         width: calc(50% - 8px);
         margin: 16px 0;
         margin-right: 16px;
+        color: $main;
+        &:visited {
+          color: $main;
+        }
+        &:hover {
+          background-color: $main;
+          color: $white;
+          transition: 0.5s;
+        }
       }
       &.mail {
         border: 4px solid $black;
         width: calc(50% - 8px);
         &:visited {
           color: $black;
+        }
+        &:hover {
+          background-color: $black;
+          color: $white;
+          transition: 0.5s;
         }
       }
     }
@@ -63,6 +83,11 @@
     color: $white;
     &:visited {
       color: $white;
+    }
+    &:hover {
+      background-color: $white;
+      color: $main;
+      transition: 0.5s;
     }
   }
 }
