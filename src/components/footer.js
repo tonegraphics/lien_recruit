@@ -1,8 +1,9 @@
 import React from "react"
+import Styles from "../styles/components/footer.module.scss"
 
 const Footer = () => (
-  <footer>
-    <div className="topFooter">
+  <footer className={Styles.footer}>
+    <div className={Styles.top}>
       <p>まずはお気軽にお問い合わせ下さい！</p>
       <div>
         <a href="#">LINE@</a>
@@ -10,7 +11,7 @@ const Footer = () => (
         <a href="#">Mail</a>
       </div>
     </div>
-    <div className="underFooter">
+    <div className={Styles.under}>
       <h2>株式会社Lien</h2>
       <a href="http://www.lien-inc.net/">オフィシャルサイトはこちらから</a>
     </div>
