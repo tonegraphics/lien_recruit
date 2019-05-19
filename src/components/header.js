@@ -62,6 +62,18 @@ class Header extends React.Component {
     console.log(this.contents);
   }
 
+  headerImage() {
+    const headerIamge = (
+      <div className={Style.image}>
+          <div className={Style.message}>
+            <strong>夢と誇りを持てる<br />社会のために</strong>
+          </div>
+      </div>
+    );
+
+    return headerIamge;
+  }
+
   listItems() {
     const listItems = this.contents.map((content) => 
       <div 
@@ -78,11 +90,12 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className={Style.image}>
+        {/* <div className={Style.image}>
           <div className={Style.message}>
             <strong>夢と誇りを持てる<br />社会のために</strong>
           </div>
-        </div>
+        </div> */}
+        {this.headerImage()}
         {this.listItems()}
       </header>
       
