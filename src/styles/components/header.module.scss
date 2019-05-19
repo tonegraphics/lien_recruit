@@ -32,10 +32,10 @@
     text-align: center;
     border-right: 2px solid $white;
     border-left: 2px solid $white;
-}    
+}
 
-.true {
-    
+.current {
+    border-bottom: 16px solid $accent;
 }
 
 .link {
@@ -53,13 +53,6 @@
         transition: 0.5s;
     }
     
-}
-.current {
-    border-bottom: 16px solid $accent;
-}
-
-.activeLink {
-    background-color: $accent;
 }
 
 @media screen and (max-width: 1024px) {

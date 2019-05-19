@@ -44,7 +44,8 @@ class Header extends React.Component {
     this.url = window.location.href;
     this.contents = contents;
    }
-
+  
+  // コンポーネントの読み込み時に実行される
   componentWillMount() {
     this.contents.map((content) => {
       if(baseLink + content.link === this.url) {
