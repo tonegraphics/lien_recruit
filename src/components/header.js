@@ -82,7 +82,7 @@ class Header extends React.Component {
     return headerIamge;
   }
 
-  listItems() {
+  headerMenu() {
     const listItems = this.contents.map((content) => 
       <div 
         key={content.link} 
@@ -91,20 +91,15 @@ class Header extends React.Component {
       </div>
     );
     return(
-      <div className={Style.listItems}>{listItems}</div>
+      <div className={Style.headerMenu}>{listItems}</div>
     )
   }
 
   render() {
     return (
       <header>
-        {/* <div className={Style.image}>
-          <div className={Style.message}>
-            <strong>夢と誇りを持てる<br />社会のために</strong>
-          </div>
-        </div> */}
         {this.headerImage()}
-        {this.listItems()}
+        {this.headerMenu()}
       </header>
       
     );
