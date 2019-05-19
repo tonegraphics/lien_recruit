@@ -43,22 +43,47 @@ class BergerMenu extends React.Component {
     constructor(props) {
         super(props);
         this.contents = contents;
+        this.state = {
+          isOpen: false
+        };
+        this.hundleClick = this.hundleClick.bind(this);
     }
 
     headerMenu() {
-        const listItems = this.contents.map((content) => 
-          <div 
-            key={content.link} 
-            className={Style.listItem}>
-            <Link to={content.link} className={Style.link}>{content.title}</Link>
-          </div>
-        );
+      const listItems = this.contents.map((content) => 
+        <div 
+          key={content.link} 
+          className={Style.listItem}>
+          <Link to={content.link} className={Style.link}>{content.title}</Link>
+        </div>
+      );
+      if(this.state.isOpen) {
         return(
           <div className={Style.headerMenu}>{listItems}</div>
-        )
+        );
+      } else {
+        return(
+          <div className={Style.headerMenu2}>{listItems}</div>
+        );
+      }
     }
+
+    hundleClick(props) {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+      console.log(this.state.isOpen);
+    }
+
     render() {
-        return (this.headerMenu());
+        return (
+          <div>
+            <button className={Style.burger} onClick={this.hundleClick}>
+              {this.state.isOpen?"Close":"Menu"}
+            </button>
+            {this.headerMenu()}
+          </div>
+        );
     }
 }
 

@@ -100,8 +100,8 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        {this.headerImage()}
         <HunbergerMenu />
+        {this.headerImage()}
         {this.headerMenu()}
       </header>
       
