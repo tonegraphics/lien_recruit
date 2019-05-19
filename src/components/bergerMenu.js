@@ -5,7 +5,7 @@ import React from "react"
 import Burger from '@animated-burgers/burger-rotate' 
 import '@animated-burgers/burger-rotate/dist/styles.css' 
 
-import Style from "../styles/components/header.module.scss"
+import Style from "../styles/components/bergerMenu.module.scss"
 
 var contents = [
     {
@@ -39,7 +39,7 @@ var contents = [
   
   ];
 
-class HunbergerMenu extends React.Component {
+class BergerMenu extends React.Component {
     constructor(props) {
         super(props);
         this.contents = contents;
@@ -62,4 +62,4 @@ class HunbergerMenu extends React.Component {
     }
 }
 
-export default HunbergerMenu
+export default BergerMenu

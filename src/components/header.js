@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import Style from "../styles/components/header.module.scss"
 import classNames from "classnames"
-import headerMenu from "./hunbergerMenu";
-import HunbergerMenu from "./hunbergerMenu";
+import headerMenu from "./bergerMenu";
+import HunbergerMenu from "./bergerMenu";
 
 const baseLink = "http://localhost:8000";
 
