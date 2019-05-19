@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Style from "../styles/components/header.module.scss"
 import classNames from "classnames"
-import Burger from '@animated-burgers/burger-rotate' 
-import '@animated-burgers/burger-rotate/dist/styles.css' 
+import headerMenu from "./hunbergerMenu";
 
 const baseLink = "http://localhost:8000";
 
