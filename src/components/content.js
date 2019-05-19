@@ -13,10 +13,10 @@ const Content = ({image, title, body}) => (
   </div>
 )
 
-Content.protoType = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  body: PropTypes.string,
+Content.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 }
 
 Content.defaultProps = {

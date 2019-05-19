@@ -48,16 +48,6 @@ const ContentsList = () => {
           />
         )
       })}
-      {/* <Content 
-        image="interview01.jpg"
-        title="スタッフインタビュー"
-        body="働いているスタッフに、入社のきっかけや仕事内容・やりがい等について聞いてみました。"
-      />
-      <Content 
-        image="interview03.jpg"
-        title="スタッフインタビュー"
-        body="働いているスタッフに、入社のきっかけや仕事内容・やりがい等について聞いてみました。"
-      /> */}
     </div>
   )
 }
