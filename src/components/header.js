@@ -1,42 +1,111 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Style from "../styles/components/header.module.scss"
+import classNames from "classnames"
+import SlideMenu from "./slideMenu";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const baseLink = "http://localhost:8000";
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+var contents = [
+  {
+    title: "りあん",
+    link: "/",
+  },
+  {
+    title: "未来の保育士さんへ",
+    link: "/message",
+  },
+  {
+    title: "スタッフインタビュー",
+    link: "/interview",
+  },
+  {
+    title: "見学",
+    link: "/visit"
+  },
+  {
+    title: "募集要項",
+    link: "/recruit",
+  },
+  {
+    title: "りあんの魅力",
+    link: "/classrooms",
+  },
+  {
+    title: "制度",
+    link: "/welfare",
+  }
 
-Header.defaultProps = {
-  siteTitle: ``,
+];
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.url = window.location.href;
+    this.contents = contents;
+   }
+  
+  // コンポーネントの読み込み時に実行される
+  componentWillMount() {
+    this.contents.map((content) => {
+      if(baseLink + content.link === this.url) {
+        content.classes = classNames(
+          Style.listItem,
+          Style.current
+        );
+      } else {
+        content.classes = classNames(
+          Style.listItem
+        );
+      }
+    });
+    console.log(this.contents);
+  }
+
+  headerImage() {
+    var headerIamge = (
+      <div className={Style.firstImage}></div>
+    );
+    if(this.url === baseLink + this.contents[0].link) {
+      headerIamge = (
+        <div className={Style.homeImage}>
+          <div className={Style.homeImage__message}>
+            <strong>夢と誇りを持てる<br />社会のために</strong>
+          </div>
+        </div>
+      );
+    } else if(this.url === baseLink + this.contents[3].link || this.url === baseLink + this.contents[4].link) {
+      headerIamge = (
+        <div className={Style.secondImage}></div>
+      );
+    }
+    return headerIamge;
+  }
+
+  headerMenu() {
+    const listItems = this.contents.map((content) => 
+      <div 
+        key={content.link} 
+        className={content.classes}>
+        <Link to={content.link} className={Style.link}>{content.title}</Link>
+      </div>
+    );
+    return(
+      <div className={Style.headerMenu}>{listItems}</div>
+    )
+  }
+
+  render() {
+    return (
+      <header>
+        <SlideMenu isAppeared={true} />
+        {this.headerImage()}
+        {this.headerMenu()}
+      </header>
+      
+    );
+  }
 }
 
 export default Header
