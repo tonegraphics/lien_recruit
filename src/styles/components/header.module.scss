@@ -1,6 +1,6 @@
 @import '../variable/variables';
 
- .image {
+ .homeImage {
     background-image: url("../../images/header01.jpg");
     background-size: cover;
     background-position: center center;
@@ -8,7 +8,7 @@
     height: 720px;
 }
 
-.message {
+.homeImage__message {
     position: relative;
     top: 200px;
     left: calc(100% - 400px - 40px);
