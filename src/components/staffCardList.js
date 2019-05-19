@@ -5,6 +5,7 @@ import StaffCard from './staffCard';
 const StaffCardList = () => {
   const staffCardItem =[
     {
+      id: 1,
       number: '01',
       name: '林 愛子',
       job: 'ことね教室 自閉症セラピスト',
@@ -12,6 +13,7 @@ const StaffCardList = () => {
       image: 'interview01.jpg'
     },
     {
+      id: 2,
       number: '02',
       name: '福田　恵莉',
       job: 'ことね教室 保育士',
@@ -19,6 +21,7 @@ const StaffCardList = () => {
       image: 'interview02.jpg'
     },
     {
+      id: 3,
       number: '03',
       name: '安河内 望月',
       job: '西徳前教室 保育士',
@@ -26,6 +29,7 @@ const StaffCardList = () => {
       image: 'interview03.jpg'
     },
     {
+      id: 4,
       number: '04',
       name: '宮田 佳香',
       job: '西徳前教室 作業療法士',
@@ -38,6 +42,7 @@ const StaffCardList = () => {
       { staffCardItem.map((item) => {
         return (
           <StaffCard
+            id={item.id}
             number={item.number}
             name={item.name}
             job={item.job}
