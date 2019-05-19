@@ -19,6 +19,28 @@
     }
 }
 
+.firstImage {
+    background-image: url("../../images/header01.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 480px;
+    &__message {
+        display: none;
+    }
+}
+
+.secondImage {
+    background-image: url("../../images/header02.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 480px;
+    &__message {
+        display: none;
+    }
+}
+
 .listItems {
     display: flex;
     justify-content: center;
