@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import Style from "../styles/components/header.module.scss"
 import classNames from "classnames"
+import Burger from '@animated-burgers/burger-rotate' 
+import '@animated-burgers/burger-rotate/dist/styles.css' 
 
 const baseLink = "http://localhost:8000";
 
@@ -99,6 +101,7 @@ class Header extends React.Component {
     return (
       <header>
         {this.headerImage()}
+        <>
         {this.headerMenu()}
       </header>
       

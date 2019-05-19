@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@animated-burgers/burger-rotate": "^1.1.2",
     "classnames": "^2.2.6",
     "gatsby": "^2.5.4",
     "gatsby-image": "^2.1.0",
