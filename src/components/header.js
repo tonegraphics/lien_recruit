@@ -3,20 +3,47 @@ import PropTypes from "prop-types"
 import React from "react"
 import Style from "../styles/components/header.module.scss"
 
+const contents = [
+  {
+    title: "りあん",
+    link: "/"
+  },
+  {
+    title: "未来の保育士さんへ",
+    link: "/message"
+  },
+  {
+    title: "スタッフインタビュー",
+    link: "/interview"
+  },
+  {
+    title: "見学",
+    link: "/visit"
+  },
+  {
+    title: "募集要項",
+    link: "/recruit"
+  },
+  {
+    title: "りあんの魅力",
+    link: "/classrooms"
+  },
+  {
+    title: "制度",
+    link: "/welfare"
+  },
+
+];
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.pageList = ["りあん", "未来の保育士さんへ", "スタッフインタビュー", "見学", "募集要項", "りあんの魅力", "制度" ]
   }
 
   listItems() {
-    const active = {
-      background: 'white',
-      color: 'aquamarine'
-    }
-    const listItems = this.pageList.map((page, index) =>
-      <div key={index} className={Style.listItem} id={index}>
-        <a className={Style.link} href="#">{page}</a>
+    const listItems = contents.map((content) =>
+      <div key={content.link} className={Style.listItem}>
+        <a className={Style.link} href={content.link}>{content.title}</a>
       </div>
     );
     return(
