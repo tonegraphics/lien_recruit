@@ -80,10 +80,10 @@ class Header extends React.Component {
       <header>
         <div className={Style.image}>
           <div className={Style.message}>
-            <strong class={Style.text}>夢と誇りを持てる<br />社会のために</strong>
+            <strong>夢と誇りを持てる<br />社会のために</strong>
           </div>
         </div>
-        <div>{this.listItems()}</div>
+        {this.listItems()}
       </header>
       
     );
