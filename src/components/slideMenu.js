@@ -2,10 +2,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Burger from '@animated-burgers/burger-rotate' 
-import '@animated-burgers/burger-rotate/dist/styles.css' 
-
-import Style from "../styles/components/bergerMenu.module.scss"
+import Style from "../styles/components/slideMenu.module.scss"
 
 var contents = [
     {
@@ -39,10 +36,11 @@ var contents = [
   
   ];
 
-class BergerMenu extends React.Component {
+class SlideMenu extends React.Component {
     constructor(props) {
         super(props);
         this.contents = contents;
+        this.isAppeared = props.isAppeared;
         this.state = {
           isOpen: false
         };
@@ -59,11 +57,11 @@ class BergerMenu extends React.Component {
       );
       if(this.state.isOpen) {
         return(
-          <div className={Style.headerMenu}>{listItems}</div>
+          <div className={Style.openMenu}>{listItems}</div>
         );
       } else {
         return(
-          <div className={Style.headerMenu2}>{listItems}</div>
+          <div className={Style.closeMenu}>{listItems}</div>
         );
       }
     }
@@ -72,19 +70,22 @@ class BergerMenu extends React.Component {
       this.setState({
         isOpen: !this.state.isOpen
       });
-      console.log(this.state.isOpen);
     }
 
     render() {
+      if (this.isAppeared) {
         return (
           <div>
-            <button className={Style.burger} onClick={this.hundleClick}>
+            <button className={Style.slideButton} onClick={this.hundleClick}>
               {this.state.isOpen?"Close":"Menu"}
             </button>
             {this.headerMenu()}
           </div>
         );
+      } else {
+        return (<div></div>);
+      }
     }
 }
 
-export default BergerMenu
+export default SlideMenu

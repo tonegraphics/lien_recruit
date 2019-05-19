@@ -1,0 +1,62 @@
+@import '../variable/variables';
+
+.openMenu {
+    z-index: 5;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1.0s;
+}
+
+.closeMenu {
+    z-index: 5;
+    position: absolute;
+    top: -800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1.0s;
+}
+
+.listItem {
+    width: 100%;
+    height: 80px;
+    background-color: lighten($color: $black, $amount: 50);
+    text-align: center;
+    border-bottom: 2px solid $white;
+}
+
+.link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+        color: $black;
+        background-color: $accent;
+        transition: 0.5s;
+    }
+    
+}
+
+.disAppear {
+    display: none;
+}
+
+.slideButton {
+    z-index: 5;
+    background-color: $main;
+    color: $white;
+    width: 100%;
+    height: 80px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

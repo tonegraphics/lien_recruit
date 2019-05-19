@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Style from "../styles/components/header.module.scss"
 import classNames from "classnames"
-import headerMenu from "./bergerMenu";
-import HunbergerMenu from "./bergerMenu";
+import SlideMenu from "./slideMenu";
 
 const baseLink = "http://localhost:8000";
 
@@ -100,7 +99,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <HunbergerMenu />
+        <SlideMenu isAppeared={true} />
         {this.headerImage()}
         {this.headerMenu()}
       </header>
