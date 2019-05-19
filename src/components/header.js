@@ -101,7 +101,6 @@ class Header extends React.Component {
     return (
       <header>
         {this.headerImage()}
-        <>
         {this.headerMenu()}
       </header>
       
