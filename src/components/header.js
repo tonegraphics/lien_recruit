@@ -63,14 +63,22 @@ class Header extends React.Component {
   }
 
   headerImage() {
-    const headerIamge = (
-      <div className={Style.homeImage}>
+    var headerIamge = (
+      <div className={Style.firstImage}></div>
+    );
+    if(this.url === baseLink + this.contents[0].link) {
+      headerIamge = (
+        <div className={Style.homeImage}>
           <div className={Style.homeImage__message}>
             <strong>夢と誇りを持てる<br />社会のために</strong>
           </div>
-      </div>
-    );
-
+        </div>
+      );
+    } else if(this.url === baseLink + this.contents[3].link || this.url === baseLink + this.contents[4].link) {
+      headerIamge = (
+        <div className={Style.secondImage}></div>
+      );
+    }
     return headerIamge;
   }
 
