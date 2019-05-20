@@ -4,7 +4,7 @@ import Styles from "../styles/components/homeButton.module.scss"
 
 const baseLink = "http://localhost:8000";
 
-class homeButton extends React.Component {
+class HomeButton extends React.Component {
     constructor(props) {
         super(props);
         this.url = window.location.href;
@@ -23,4 +23,4 @@ class homeButton extends React.Component {
     }
 }
 
-export default homeButton
+export default HomeButton
