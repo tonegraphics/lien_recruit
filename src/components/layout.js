@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import HomeButton from "./homeButton"
 import "./layout.css"
 
 
@@ -36,6 +37,7 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
+        <HomeButton />
           <main>{children}</main>
         </div>
         <Footer />

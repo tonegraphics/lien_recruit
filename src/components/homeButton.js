@@ -1,18 +1,25 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-import Styles from "../styles/components/header.module.scss"
-import classNames from "classnames"
-import SlideMenu from "./slideMenu";
+import Styles from "../styles/components/homeButton.module.scss"
+
+const baseLink = "http://localhost:8000";
 
 class homeButton extends React.Component {
     constructor(props) {
         super(props);
+        this.url = window.location.href;
+        this.homeLink = "/";
+        console.log(this.url);
     }
     render() {
-        return (
-            <Link to={"/"} className={Styles.homeButton}>Home</Link>
-        );
+        if (this.url !== baseLink + this.homeLink) {
+            return (
+                <Link to={this.homeLink} className={Styles.homeButton}>Home</Link>
+            );
+        } else {
+            return (<div></div>);
+        }
+        
     }
 }
 
