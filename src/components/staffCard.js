@@ -3,8 +3,7 @@ import Image from '../components/image';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Styles from '../styles/components/staffCard.module.scss';
-
-// import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const StaffCard = ({id, number, name, job, word, image}) => {
 
@@ -18,7 +17,7 @@ const StaffCard = ({id, number, name, job, word, image}) => {
   }
   
   return (
-    <div className={cardClass}>
+    <Link to={`interview/${id}`} className={cardClass}>
       <div className={Styles.image}>
         <Image filename={image} />
       </div>
@@ -32,7 +31,7 @@ const StaffCard = ({id, number, name, job, word, image}) => {
         </div>
         <h3 className={Styles.word}>{word}</h3>
       </div>
-    </div>
+    </Link>
   )
 }
 

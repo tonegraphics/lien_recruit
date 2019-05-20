@@ -4,6 +4,7 @@ import Headline from '../components/headline';
 import Layout from '../components/layout';
 import Styles from '../styles/templates/staff.module.scss';
 import Question from './question';
+import { Link } from 'gatsby';
 
 const Staff = ({ pageContext: { path, name, job, image, profile, question, answer} }) => (
   <Layout>
@@ -34,6 +35,12 @@ const Staff = ({ pageContext: { path, name, job, image, profile, question, answe
       question={question[2]}
       answer={answer[2]}
     />
+
+    <Link to='interview' className={Styles.back}>
+      <div>
+        <h3>スタッフインタビュー一覧に戻る</h3>
+      </div>
+    </Link>
   </Layout>
 )
 

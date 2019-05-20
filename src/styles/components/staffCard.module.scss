@@ -6,6 +6,11 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: center;
+  text-decoration: none;
+  color: $black;
+  &:visited {
+    color: $black;
+  }
   &:hover {
     opacity: 0.5;
     transition: 0.5s;
@@ -35,6 +40,9 @@
     .number {
       color: $main;
       margin-right: 16px;
+      &:visited {
+        color: $main;
+      }
     }
     display: flex;
     justify-content: flex-start;
