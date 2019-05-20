@@ -2,13 +2,16 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
+import Headline from '../components/headline';
+import StaffCardList from "../components/staffCardList";
+
 
 const InterviewPage = () => (
   <Layout>
     <SEO title="Interview" />
-    
+    <Headline title="STAFF INTERVIEW" />
+    <StaffCardList />
   </Layout>
 )
 
