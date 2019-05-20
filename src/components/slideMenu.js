@@ -72,20 +72,16 @@ class SlideMenu extends React.Component {
       });
     }
 
-    render() {
-      if (this.isAppeared) {
-        return (
-          <div>
-            <button className={Style.slideButton} onClick={this.hundleClick}>
-              {this.state.isOpen?"Close":"Menu"}
-            </button>
-            {this.headerMenu()}
-          </div>
-        );
-      } else {
-        return (<div></div>);
-      }
-    }
+  render() {
+    return (
+      <div>
+        <button className={Style.slideButton} onClick={this.hundleClick}>
+          {this.state.isOpen ? "Close" : "Menu"}
+        </button>
+        {this.headerMenu()}
+      </div>
+    );
+  }
 }
 
 export default SlideMenu

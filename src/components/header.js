@@ -99,7 +99,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <SlideMenu isAppeared={true} />
+        <SlideMenu />
         {this.headerImage()}
         {this.headerMenu()}
       </header>
