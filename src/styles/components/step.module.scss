@@ -1,0 +1,38 @@
+@import '../variable/variables';
+
+.stepItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__stepItem {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        background-color: lighten($color: $black, $amount: 70);
+        line-height: 80px;
+        text-align: center;
+        margin-bottom: 16px;
+        &__number {
+            display: inline-block;
+            width: 5%;
+            font-size: 1.5rem;
+            color: $main;
+            font-weight: bold;
+            padding-left: 16px;
+        }
+        &__name {
+            display: inline-block;
+            width: 95%;
+            font-size: 1.2rem;
+            color: $black;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .stepItems {
+        &__stepItem {
+            width: 85%;
+        }
+    }
+}

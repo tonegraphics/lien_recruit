@@ -17,7 +17,7 @@ const stepItems = [
     },
     {
         id: 4,
-        name: "採用"
+        name: "内定"
     }
 ];
 
@@ -29,9 +29,9 @@ class Step extends React.Component {
 
     step() {
         const stepItems = this.stepItems.map((item) =>
-            <div className={Styles.stepItem}>
-                <p className={Styles.stepItem__number}>{item.id}</p>
-                <p className={Styles.stepItem__name}>{item.name}</p>
+            <div className={Styles.stepItems__stepItem}>
+                <p className={Styles.stepItems__stepItem__number}>{item.id}</p>
+                <p className={Styles.stepItems__stepItem__name}>{item.name}</p>
             </div>
         );
         return (
