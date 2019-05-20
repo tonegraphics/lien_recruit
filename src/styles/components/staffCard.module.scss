@@ -6,6 +6,11 @@
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: center;
+  &:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+  }
 }
 
 .reverse {

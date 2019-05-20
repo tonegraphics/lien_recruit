@@ -1,0 +1,42 @@
+@import "../variable/_variables.scss";
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 400px;
+  margin: 16px;
+}
+
+.info {
+  margin: 16px;
+  p {
+    max-width: 400px;
+  }
+}
+
+.question_wrapper {
+  width: 100%;
+  margin-bottom: 10vh;
+  p {
+    padding-left: 16px;
+  }
+}
+
+.question {
+  background-color: rgba($color: #332F36, $alpha: 0.05);
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  font-weight: normal;
+  span {
+    display: inline-block;
+    margin-right: 16px;
+    color: $main;
+  }
+}
