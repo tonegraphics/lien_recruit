@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Style from "../styles/components/header.module.scss"
+import Styles from "../styles/components/header.module.scss"
 import classNames from "classnames"
 import SlideMenu from "./slideMenu";
 
@@ -51,12 +51,12 @@ class Header extends React.Component {
     this.contents.map((content) => {
       if(baseLink + content.link === this.url) {
         content.classes = classNames(
-          Style.listItem,
-          Style.current
+          Styles.listItem,
+          Styles.current
         );
       } else {
         content.classes = classNames(
-          Style.listItem
+          Styles.listItem
         );
       }
     });
@@ -65,19 +65,19 @@ class Header extends React.Component {
 
   headerImage() {
     var headerIamge = (
-      <div className={Style.firstImage}></div>
+      <div className={Styles.firstImage}></div>
     );
     if(this.url === baseLink + this.contents[0].link) {
       headerIamge = (
-        <div className={Style.homeImage}>
-          <div className={Style.homeImage__message}>
+        <div className={Styles.homeImage}>
+          <div className={Styles.homeImage__message}>
             <strong>夢と誇りを持てる<br />社会のために</strong>
           </div>
         </div>
       );
     } else if(this.url === baseLink + this.contents[3].link || this.url === baseLink + this.contents[4].link) {
       headerIamge = (
-        <div className={Style.secondImage}></div>
+        <div className={Styles.secondImage}></div>
       );
     }
     return headerIamge;
@@ -88,11 +88,11 @@ class Header extends React.Component {
       <div 
         key={content.link} 
         className={content.classes}>
-        <Link to={content.link} className={Style.link}>{content.title}</Link>
+        <Link to={content.link} className={Styles.link}>{content.title}</Link>
       </div>
     );
     return(
-      <div className={Style.headerMenu}>{listItems}</div>
+      <div className={Styles.headerMenu}>{listItems}</div>
     )
   }
 
