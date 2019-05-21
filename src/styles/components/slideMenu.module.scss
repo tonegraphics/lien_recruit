@@ -4,22 +4,23 @@
     z-index: 5;
     position: absolute;
     top: 80px;
+    right: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: 1.0s;
+    transition: 0.7s;
 }
 
 .closeMenu {
     z-index: 5;
     position: absolute;
-    top: -800px;
+    top: -1000px;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: 1.0s;
+    transition: 0.7s;
 }
 
 .listItem {
@@ -52,13 +53,21 @@
 }
 
 .slideButton {
+    position: absolute;
+    left: calc(100% - 96px);
+    width: 96px;
     z-index: 5;
-    background-color: $main;
-    color: $white;
-    width: 100%;
+    background-color: $white;
+    color: $main;
     height: 80px;
     font-size: 1.5rem;
     font-weight: bold;
+    transition: 0.7s;
+    border-bottom: 8px solid lighten($color: $black, $amount: 50);
+    &:active {
+        top: 0;
+        border: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
