@@ -35,6 +35,17 @@
     height: 400px;
 }
 
+.hero {
+    height: 80px;
+    background-color: $main;
+    color: $accent;
+    &__title {
+        height: 80px;
+        line-height: 80px;
+        margin-left: 40px;
+    }
+}
+
 .headerMenu {
     display: flex;
     justify-content: center;
@@ -77,6 +88,12 @@
             top: 400px;
             left: 0;
             margin: 0 auto;
+        }
+    }
+    .hero {
+        &__title {
+            margin: 0;
+            text-align: center;
         }
     }
     .headerMenu {

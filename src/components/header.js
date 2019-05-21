@@ -74,6 +74,16 @@ class Header extends React.Component {
     console.log(this.contents);
   }
 
+  hero() {
+    return (
+      <div className={Styles.hero}>
+        <h1 className={Styles.hero__title}>
+          りあん RECRUIT
+        </h1>
+      </div>
+    );
+  }
+
   headerImage() {
     var headerIamge = (
       <div className={Styles.firstImage}></div>
@@ -111,6 +121,7 @@ class Header extends React.Component {
     return (
       <header>
         <SlideMenu />
+        {this.hero()}
         {this.headerImage()}
         {this.headerMenu()}
       </header>
