@@ -1,6 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Content from './content';
+import Welfare from './welfare';
 import Styles from '../styles/components/welfareList.module.scss';
 
 const WelfareList = () => {
@@ -31,7 +31,7 @@ const WelfareList = () => {
     <div className={Styles.list}>
       { contents.map((content) => {
         return (
-          <Content
+          <Welfare
             image={content.image}
             title={content.title}
             body={content.body}
