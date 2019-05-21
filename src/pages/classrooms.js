@@ -8,6 +8,7 @@ import Styles from "../styles/pages/classrooms.module.scss"
 import Image from '../components/image';
 
 
+
 const ClassroomsPage = () => (
   <Layout>
     <SEO title="Classrooms" />
