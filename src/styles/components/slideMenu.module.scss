@@ -24,16 +24,17 @@
 }
 
 .listItem {
-    width: 100%;
+    width: calc(100% - 96px);
     height: 80px;
-    background-color: lighten($color: $black, $amount: 50);
-    text-align: center;
+    background-color: rgba(lighten($color: $black, $amount: 50), 0.8);
+    text-align: left;
     border-bottom: 2px solid $white;
 }
 
 .link {
     display: inline-block;
     width: 100%;
+    padding-left: 40px;
     height: 100%;
     padding-top: 30px;
     font-size: 1rem;
