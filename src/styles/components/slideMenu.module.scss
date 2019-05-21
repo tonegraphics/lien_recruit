@@ -3,7 +3,7 @@
 .openMenu {
     z-index: 5;
     position: absolute;
-    top: 80px;
+    top: 56px;
     right: 0;
     width: 100%;
     display: flex;
@@ -26,6 +26,7 @@
 .listItem {
     width: calc(100% - 96px);
     height: 80px;
+    font-size: 1rem;
     background-color: rgba(lighten($color: $black, $amount: 50), 0.8);
     text-align: left;
     border-bottom: 2px solid $white;
@@ -36,7 +37,7 @@
     width: 100%;
     padding-left: 40px;
     height: 100%;
-    padding-top: 30px;
+    line-height: 80px;
     font-size: 1rem;
     font-weight: bold;
     color: $white;
@@ -60,8 +61,8 @@
     z-index: 5;
     background-color: $white;
     color: $main;
-    height: 80px;
-    font-size: 1.5rem;
+    height: 56px;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: 0.7s;
     border-bottom: 8px solid lighten($color: $black, $amount: 50);
@@ -76,3 +77,10 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .openMenu, .closeMenu, .slideButton.slideButton {
+        position: fixed;
+    }
+}
+

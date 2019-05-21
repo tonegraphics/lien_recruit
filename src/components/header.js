@@ -77,9 +77,9 @@ class Header extends React.Component {
   hero() {
     return (
       <div className={Styles.hero}>
-        <h1 className={Styles.hero__title}>
+        <Link to={"/"} className={Styles.hero__title}>
           りあん RECRUIT
-        </h1>
+        </Link>
       </div>
     );
   }
