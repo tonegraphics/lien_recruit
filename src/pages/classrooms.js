@@ -14,7 +14,7 @@ const classroomInfo = [
     },
     {
         name: "飯塚 柏の森教室",
-        images: ["classroom03.jpg", "classroom04.jpg"],
+        images: ["header02.jpg", "classroom04.jpg"],
     },
     {
         name: "飯塚 忠隈教室",

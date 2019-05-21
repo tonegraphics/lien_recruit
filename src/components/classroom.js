@@ -17,10 +17,10 @@ class Classroom extends React.Component {
             <div className={Styles.classroom}>
                 <p className={Styles.classroom__name}>{this.name}</p>
                 <div className={Styles.classroom__images}>
-                    <div className={Styles.classroom__images}>
+                    <div className={Styles.classroom__images__image}>
                         <Image filename={this.images[0]} />
                     </div>
-                    <div className={Styles.classroom__images}>
+                    <div className={Styles.classroom__images__image}>
                         <Image filename={this.images[1]} />
                     </div>
                 </div>
