@@ -1,9 +1,9 @@
 import React from 'react';
-import Styles from '../styles/components/welfare.module.scss';
+import Styles from '../styles/components/welfareItem.module.scss';
 import PropTypes from 'prop-types';
 import Image from './image';
 
-const Welfare = ({image, title, body}) => (
+const WelfareItem = ({image, title, body}) => (
   <div className={Styles.welfare}>
     <div className={Styles.image}>
       <Image filename={image} />
@@ -13,16 +13,16 @@ const Welfare = ({image, title, body}) => (
   </div>
 )
 
-Welfare.propTypes = {
+WelfareItem.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 }
 
-Welfare.defaultProps = {
+WelfareItem.defaultProps = {
   image: ``,
   title: ``,
   body: ``,
 }
 
-export default Welfare
+export default WelfareItem
