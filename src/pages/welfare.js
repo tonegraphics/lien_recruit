@@ -12,8 +12,8 @@ const WelfarePage = () => (
   <Layout>
     <SEO title="Welfare" />
     <Headline title="社内制度" />
-    <Headline title="その他の制度" />
     <WelfareList />
+    <Headline title="その他の制度" />
   </Layout>
 )
 

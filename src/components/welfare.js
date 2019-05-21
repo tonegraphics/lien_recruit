@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Image from './image';
 
 const Welfare = ({image, title, body}) => (
-  <div className={Styles.content}>
+  <div className={Styles.welfare}>
     <div className={Styles.image}>
       <Image filename={image} />
     </div>
@@ -13,13 +13,13 @@ const Welfare = ({image, title, body}) => (
   </div>
 )
 
-Content.propTypes = {
+Welfare.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 }
 
-Content.defaultProps = {
+Welfare.defaultProps = {
   image: ``,
   title: ``,
   body: ``,
