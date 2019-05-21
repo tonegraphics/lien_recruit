@@ -1,0 +1,31 @@
+@import "../variable/_variables.scss";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .profile {
+    width: 400px;
+    margin: 16px;
+    h3 {
+      // text-align: center;
+      margin: 1.4rem;
+      // margin-left: 16px;
+    }
+    ul {
+      list-style-type: none;
+      margin-left: 1.4rem;
+    }
+  }
+
+  .message {
+    margin: 16px;
+    // width: 400px;
+    h2 {
+      color: $main;
+      margin-bottom: 2.2rem;
+    }
+  }
+
+}
