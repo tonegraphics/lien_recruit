@@ -4,7 +4,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Headline from "../components/headline";
-import ContentsList from "../components/contentsList";
+import WelfareList from "../components/welfareList";
 import Styles from "../styles/pages/welfare.module.scss"
 import SubWelfare from "../components/subWalfare"
 
@@ -13,7 +13,7 @@ const WelfarePage = () => (
     <SEO title="Welfare" />
     <Headline title="社内制度" />
     <Headline title="その他の制度" />
-    <ContentsList />
+    <WelfareList />
   </Layout>
 )
 
