@@ -1,0 +1,20 @@
+@import '../variable/variables';
+
+.classroom {
+    margin-bottom: 120px;
+    &__name {
+        color: $main;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__image {
+            width: 480px;
+            padding: 8px;
+        }
+    }
+}

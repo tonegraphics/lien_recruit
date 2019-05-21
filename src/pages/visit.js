@@ -10,7 +10,7 @@ import Image from '../components/image';
 
 const VisitPage = () => (
   <Layout>
-    <SEO title="Interview" />
+    <SEO title="Visit" />
     <Headline title="見学におこし下さい" />
     <div className={Styles.top}>
         <p className={Styles.top__text}>
