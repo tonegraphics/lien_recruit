@@ -44,12 +44,23 @@ class Header extends React.Component {
     super(props);
     this.url = window.location.href;
     this.contents = contents;
-   }
+  }
+
+  FixedStaffUrl(url) {
+    const interviewLink = baseLink + this.contents[2].link
+    console.log(url.slice(0, -2));
+    if (url.slice(0, -2) === interviewLink) {
+      return interviewLink;
+    } else {
+      return url;
+    }
+  }
   
   // コンポーネントの読み込み時に実行される
   componentWillMount() {
     this.contents.map((content) => {
-      if(baseLink + content.link === this.url) {
+      const realLink = baseLink + content.link;
+      if( realLink === this.url || realLink === this.FixedStaffUrl(this.url)) {
         content.classes = classNames(
           Styles.listItem,
           Styles.current
