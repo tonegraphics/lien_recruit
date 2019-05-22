@@ -3,38 +3,41 @@
 .openMenu {
     z-index: 5;
     position: absolute;
-    top: 80px;
+    top: 56px;
+    right: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: 1.0s;
+    transition: 0.7s;
 }
 
 .closeMenu {
     z-index: 5;
     position: absolute;
-    top: -800px;
+    top: -1000px;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: 1.0s;
+    transition: 0.7s;
 }
 
 .listItem {
-    width: 100%;
+    width: calc(100% - 96px);
     height: 80px;
-    background-color: lighten($color: $black, $amount: 50);
-    text-align: center;
+    font-size: 1rem;
+    background-color: rgba(lighten($color: $black, $amount: 50), 0.8);
+    text-align: left;
     border-bottom: 2px solid $white;
 }
 
 .link {
     display: inline-block;
     width: 100%;
+    padding-left: 40px;
     height: 100%;
-    padding-top: 30px;
+    line-height: 80px;
     font-size: 1rem;
     font-weight: bold;
     color: $white;
@@ -52,13 +55,21 @@
 }
 
 .slideButton {
+    position: absolute;
+    left: calc(100% - 96px);
+    width: 96px;
     z-index: 5;
-    background-color: $main;
-    color: $white;
-    width: 100%;
-    height: 80px;
-    font-size: 1.5rem;
+    background-color: $white;
+    color: $main;
+    height: 56px;
+    font-size: 1.2rem;
     font-weight: bold;
+    transition: 0.7s;
+    border-bottom: 8px solid lighten($color: $black, $amount: 50);
+    &:active {
+        top: 0;
+        border: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -66,3 +77,10 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .openMenu, .closeMenu, .slideButton.slideButton {
+        position: fixed;
+    }
+}
+

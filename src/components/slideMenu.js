@@ -5,36 +5,35 @@ import React from "react"
 import Style from "../styles/components/slideMenu.module.scss"
 
 var contents = [
-    {
-      title: "りあん",
-      link: "/",
-    },
-    {
-      title: "未来の保育士さんへ",
-      link: "/message",
-    },
-    {
-      title: "スタッフインタビュー",
-      link: "/interview",
-    },
-    {
-      title: "見学",
-      link: "/visit"
-    },
-    {
-      title: "募集要項",
-      link: "/recruit",
-    },
-    {
-      title: "りあんの魅力",
-      link: "/classrooms",
-    },
-    {
-      title: "制度",
-      link: "/welfare",
-    }
-  
-  ];
+  {
+    title: "りあん",
+    link: "/",
+  },
+  {
+    title: "未来の保育士さんへ",
+    link: "/message",
+  },
+  {
+    title: "スタッフインタビュー",
+    link: "/interview",
+  },
+  {
+    title: "教室紹介",
+    link: "/classrooms",
+  },
+  {
+    title: "見学",
+    link: "/visit"
+  },
+  {
+    title: "制度",
+    link: "/welfare",
+  },
+  {
+    title: "募集要項",
+    link: "/recruit",
+  },
+];
 
 class SlideMenu extends React.Component {
     constructor(props) {

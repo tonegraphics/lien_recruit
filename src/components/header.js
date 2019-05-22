@@ -21,22 +21,21 @@ var contents = [
     link: "/interview",
   },
   {
+    title: "教室紹介",
+    link: "/classrooms",
+  },
+  {
     title: "見学",
     link: "/visit"
+  },
+  {
+    title: "制度",
+    link: "/welfare",
   },
   {
     title: "募集要項",
     link: "/recruit",
   },
-  {
-    title: "りあんの魅力",
-    link: "/classrooms",
-  },
-  {
-    title: "制度",
-    link: "/welfare",
-  }
-
 ];
 
 class Header extends React.Component {
@@ -72,6 +71,16 @@ class Header extends React.Component {
       }
     });
     console.log(this.contents);
+  }
+
+  hero() {
+    return (
+      <div className={Styles.hero}>
+        <Link to={"/"} className={Styles.hero__title}>
+          りあん RECRUIT
+        </Link>
+      </div>
+    );
   }
 
   headerImage() {
@@ -111,6 +120,7 @@ class Header extends React.Component {
     return (
       <header>
         <SlideMenu />
+        {this.hero()}
         {this.headerImage()}
         {this.headerMenu()}
       </header>
