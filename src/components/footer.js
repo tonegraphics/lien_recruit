@@ -13,7 +13,7 @@ const Footer = () => (
     </div>
     <div className={Styles.under}>
       <h2>株式会社 Lien</h2>
-      <a href="http://www.lien-inc.net/">オフィシャルサイトはこちらから</a>
+      <a href="http://www.lien-inc.net/" target='_blank' >オフィシャルサイトはこちらから</a>
     </div>
   </footer>
 )
