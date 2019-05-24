@@ -84,10 +84,11 @@ class Header extends React.Component {
   }
 
   headerImage() {
+    const link = this.tailOf(1);
     var headerIamge = (
       <div className={Styles.firstImage}></div>
     );
-    if(this.url === baseLink + this.contents[0].link) {
+    if(link === this.contents[0].link) {
       headerIamge = (
         <div className={Styles.homeImage}>
           <div className={Styles.homeImage__message}>
@@ -95,7 +96,7 @@ class Header extends React.Component {
           </div>
         </div>
       );
-    } else if(this.url === baseLink + this.contents[3].link || this.url === baseLink + this.contents[4].link) {
+    } else if(link === this.contents[3].link || link === this.contents[4].link) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );
