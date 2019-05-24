@@ -7,7 +7,7 @@ const ContentsList = () => {
   const contents = [
     // CEOの画像がないので仮置き
     {
-      image: 'interview01.jpg',
+      image: 'contents01.jpg',
       title: '未来の保育士さんへ',
       body: 'りあんで働きたい方や興味を持っていただいた方へ向けた、代表からのメッセージです。',
       path: 'message'
@@ -43,7 +43,7 @@ const ContentsList = () => {
       path: 'recruit'
     }
   ];
-  
+
   return (
     <div className={Styles.list}>
       { contents.map((content) => {
