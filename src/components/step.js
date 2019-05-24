@@ -12,17 +12,17 @@ const stepItems = [
     {
         id: 2,
         name: "見学",
-        text: "ご希望の事業所を見学できます。実際に勤務している職員が案内を致しますので見学の際に不安な事はお尋ね下さい。"
+        text: "ご希望の事業所を見学できます。現役の職員が案内を致しますので、見学の際に不安な事はお尋ね下さい。"
     },
     {
         id: 3,
         name: "面接",
-        text: "見学後に面接を行います。履歴書、職務経歴書をご持参下さい。"
+        text: "見学後に面接を行います。履歴書と職務経歴書をご持参下さい。"
     },
     {
         id: 4,
         name: "内定",
-        text: "後日内定通知書が届きます。記載された日時に指定の場所にお越し頂き入社オリエンテーションを行います。"
+        text: "後日内定通知書が届きます。記載された日時に指定の場所にお越し頂き、入社オリエンテーションを行います。"
     }
 ];
 
@@ -43,10 +43,16 @@ class Step extends React.Component {
             );
 
         return (
-            <div className={itemClass}>
-                <p className={Styles.stepItems__stepItem__number}>{item.id}</p>
-                <p className={Styles.stepItems__stepItem__name}>{item.name}</p>
+            <div>
+                <div className={itemClass}>
+                    <p className={Styles.stepItems__stepItem__number}>{item.id}</p>
+                    <p className={Styles.stepItems__stepItem__name}>{item.name}</p>
+                </div>
+                <div className={Styles.text}>
+                    <p>{item.text}</p>
+                </div>
             </div>
+            
         );
     }
 
