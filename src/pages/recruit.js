@@ -62,42 +62,42 @@ const Recruit = () => (
       <tr>
         <td>10:30</td>
         <td>朝の会</td>
-        <td>朝の会</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>11:40</td>
         <td>昼食</td>
-        <td>昼食</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>12:00</td>
         <td>休憩</td>
-        <td>休憩</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>13:00</td>
         <td>午後の活動</td>
-        <td>午後の活動</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>14:00</td>
         <td>おやつタイム</td>
-        <td>おやつタイム</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>14:15</td>
         <td>帰り支度の援助</td>
-        <td>帰り支度の援助</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>14:30</td>
         <td>バス送り出し</td>
-        <td>バス送り出し</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>14:40</td>
         <td>掃除</td>
-        <td>掃除</td>
+        <td>〃</td>
       </tr>
       <tr>
         <td>14:50</td>
@@ -116,6 +116,69 @@ const Recruit = () => (
       </tr>
       <tr>
         <td>17:30</td>
+        <td>退社</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <table className={Styles.timetable}>
+      <tr>
+        <th></th>
+        <th>正社員</th>
+        <th>パート</th>
+      </tr>
+      <tr>
+        <td>10:30</td>
+        <td>出勤・朝礼</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>11:00</td>
+        <td>教材準備</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>13:00</td>
+        <td>休憩</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>14:00</td>
+        <td>送迎開始</td>
+        <td>出勤</td>
+      </tr>
+      <tr>
+        <td>15:30</td>
+        <td>施設到着</td>
+        <td>〃</td>
+      </tr>
+      <tr>
+        <td>17:00</td>
+        <td>課題活動</td>
+        <td>〃</td>
+      </tr>
+      <tr>
+        <td>17:40</td>
+        <td>帰り支度の援助</td>
+        <td>〃</td>
+      </tr>
+      <tr>
+        <td>18:00</td>
+        <td>帰りの会・送迎</td>
+        <td>帰りの会・掃除</td>
+      </tr>
+      <tr>
+        <td>18:30</td>
+        <td>送迎</td>
+        <td>退社</td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td>記録・終礼</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>19:30</td>
         <td>退社</td>
         <td></td>
       </tr>
