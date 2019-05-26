@@ -9,7 +9,6 @@ import ContentsList from "../components/contentsList";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Headline title="INFORMATION" />
     <Headline title="CONTENTS" />
     <ContentsList />
   </Layout>

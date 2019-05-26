@@ -1,7 +1,7 @@
 @import "../variable/_variables.scss";
 
 .require {
-  background: rgba($color: #332F36, $alpha: 0.05);
+  background: $lightGray;
   padding: 1rem;
   border-radius: 2%;
   max-width: 800px;
@@ -20,7 +20,7 @@
 }
 
 .timetable {
-  background: linear-gradient($accent, $main);
+  background: $gradient;
   border-radius: 2%;
   max-width: 800px;
   margin: 0 auto;
