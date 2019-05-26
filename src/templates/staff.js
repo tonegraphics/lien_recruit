@@ -5,9 +5,11 @@ import Layout from '../components/layout';
 import Styles from '../styles/templates/staff.module.scss';
 import Question from './question';
 import { Link } from 'gatsby';
+import SEO from "../components/seo";
 
 const Staff = ({ pageContext: { path, name, job, image, profile, question, answer} }) => (
   <Layout>
+    <SEO title="スタッフインタビュー" />
     <Headline title='PROFILE' />
     <div className={Styles.profile}>
       <div className={Styles.image}>

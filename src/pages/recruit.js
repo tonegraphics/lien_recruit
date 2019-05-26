@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import Headline from '../components/headline';
 import Styles from '../styles/pages/recruit.module.scss';
 import Accordion from '../components/accordion';
+import SEO from "../components/seo";
 
 const Recruit = () => {
   let table1 = (
@@ -369,7 +370,8 @@ const Recruit = () => {
   ]
 
   return (
-    <Layout> 
+    <Layout>
+      <SEO title='募集要項' />
       <Headline title='募集要項' />
       <Accordion data={require} />
 

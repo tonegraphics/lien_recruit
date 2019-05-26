@@ -1,11 +1,8 @@
 import React from "react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Headline from '../components/headline';
 import Classroom from '../components/classroom'
-import Styles from "../styles/pages/classrooms.module.scss"
-import Image from '../components/image';
 
 const classroomInfo = [
     {
@@ -28,7 +25,7 @@ const classroomInfo = [
 
 const ClassroomsPage = () => (
   <Layout>
-    <SEO title="Classrooms" />
+    <SEO title="教室紹介" />
     <Headline title="教室紹介" />
     { classroomInfo.map((info) => (
         <Classroom name={info.name} images={info.images} />  

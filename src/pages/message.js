@@ -2,10 +2,12 @@ import React from 'react';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import Headline from '../components/headline';
+import SEO from "../components/seo";
 import Styles from '../styles/pages/message.module.scss';
 
 const Message = () => (
   <Layout>
+    <SEO title='未来の保育士さんへ' />
     <Headline title='MESSAGE' />
     <div className={Styles.container} >
       <div className={Styles.message}>

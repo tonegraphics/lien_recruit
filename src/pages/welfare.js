@@ -1,6 +1,4 @@
 import React from "react"
-// import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Headline from "../components/headline";
@@ -33,7 +31,7 @@ const subWalfareItems = [
 
 const WelfarePage = () => (
   <Layout>
-    <SEO title="Welfare" />
+    <SEO title="社内制度" />
     <Headline title="社内制度" />
     <WelfareList />
     <Headline title="その他の制度" />

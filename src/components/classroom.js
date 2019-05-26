@@ -1,5 +1,3 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Styles from "../styles/components/classroom.module.scss"
 import Image from '../components/image';
