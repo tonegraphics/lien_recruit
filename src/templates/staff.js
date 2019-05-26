@@ -7,7 +7,7 @@ import Question from './question';
 import { Link } from 'gatsby';
 import SEO from "../components/seo";
 
-const Staff = ({ pageContext: { path, name, job, image, profile, question, answer} }) => (
+const Staff = ({ pageContext: {name, job, image, profile, question, answer} }) => (
   <Layout>
     <SEO title="スタッフインタビュー" />
     <Headline title='PROFILE' />

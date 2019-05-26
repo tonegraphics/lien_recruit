@@ -59,6 +59,7 @@ class Header extends React.Component {
   componentWillMount() {
     const link = this.tailOf(1);
     const subLink = this.fixedStaffUrl();
+    // eslint-disable-next-line
     this.contents.map((content) => {
       if (link === content.link || subLink === content.link ) {
         content.classes = classNames(
