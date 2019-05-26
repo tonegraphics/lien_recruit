@@ -25,7 +25,7 @@ const Message = () => (
         </p>
       </div>
       <div className={Styles.profile}>
-        <Image filename='staff01.png' />
+        <Image filename='ceo.png' />
         <h3>三木 千恵美</h3>
         <ul>
           <li>株式会社Lien 代表取締役</li>
