@@ -7,7 +7,14 @@
   margin: 0 auto;
   td, th {
     border: none;
-    padding: 2rem;
+    padding: 1.6rem 1.2rem;
+  }
+  th {
+    width: 120px;
+    // padding-right: 0;
+    span {
+      font-size: 0.8rem;
+    }
   }
 }
 

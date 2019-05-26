@@ -9,31 +9,182 @@ const Recruit = () => (
     <table className={Styles.require}>
       <tr>
         <th>募集職種</th>
-        <td>保育士・デイサービス</td>
+        <td>児童発達支援管理者</td>
       </tr>
       <tr>
         <th>応募資格</th>
-        <td>2020年3月に卒業予定であること</td>
+        <td>児童発達支援管理者研修又はサービス管理責任者研修修了者、障がい福祉サービス又は保育所等の勤務3年以上の経験者</td>
       </tr>
       <tr>
-        <th>勤務地</th>
-        <td>福岡県飯塚市</td>
+        <th rowSpan='2'>勤務時間 <span>(シフト制)</span></th>
+        <td>未就学クラス 8:30〜18:00 の間8時間</td>
       </tr>
       <tr>
-        <th>勤務時間</th>
-        <td>0:30~23:30</td>
+        {/* <th></th> */}
+        <td>放課後等デイサービス 10:00〜19:30 の間8時間</td>
       </tr>
       <tr>
         <th>給与</th>
-        <td>月給200万円</td>
+        <td>250,000円〜270,000円</td>
       </tr>
       <tr>
-        <th>休日・休暇</th>
-        <td>そんなものはない</td>
+        <th>賞与</th>
+        <td>基本給1.5ヶ月分</td>
       </tr>
       <tr>
-        <th>福利厚生</th>
-        <td>マック永久無料</td>
+        <th>休日</th>
+        <td>日・他(12/29〜1/3休み)</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>飯塚市、嘉麻市内の教室</td>
+      </tr>
+    </table>
+
+    <table className={Styles.require}>
+      <tr>
+        <th>募集職種</th>
+        <td>言語聴覚士・作業療法士・臨床心理士</td>
+      </tr>
+      <tr>
+        <th>内容</th>
+        <td>2歳〜5歳の発達の遅れが気になるお子様の療育支援</td>
+      </tr>
+      <tr>
+        <th>勤務時間</th>
+        <td>9:00〜18:00(応相談)</td>
+      </tr>
+      <tr>
+        <th>給与</th>
+        <td>250,000円〜300,000円</td>
+      </tr>
+      <tr>
+        <th>賞与</th>
+        <td>基本給1.5ヶ月分</td>
+      </tr>
+      <tr>
+        <th>休日</th>
+        <td>土日・祝(12/29〜1/3休み)</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>飯塚市、嘉麻市内の教室</td>
+      </tr>
+    </table>
+
+    <table className={Styles.require}>
+      <tr>
+        <th>募集職種</th>
+        <td>保育士又は児童指導員</td>
+      </tr>
+      <tr>
+        <th>応募資格</th>
+        <td>教諭免許又は児童福祉サービス2年以上経験者等</td>
+      </tr>
+      <tr>
+        <th rowSpan='2'>勤務時間 <span>(シフト制)</span></th>
+        <td>未就学クラス 8:30〜18:00 の間8時間</td>
+      </tr>
+      <tr>
+        {/* <th></th> */}
+        <td>放課後等デイサービス 10:00〜19:30 の間8時間</td>
+      </tr>
+      <tr>
+        <th>給与</th>
+        <td>210,000円</td>
+      </tr>
+      <tr>
+        <th>賞与</th>
+        <td>基本給1.5ヶ月分</td>
+      </tr>
+      <tr>
+        <th>休日</th>
+        <td>日・他(12/29〜1/3休み)</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>飯塚市、嘉麻市内の教室</td>
+      </tr>
+    </table>
+
+    <table className={Styles.require}>
+      <tr>
+        <th>募集職種</th>
+        <td>保育士(パート)</td>
+      </tr>
+      <tr>
+        <th rowSpan='2'>勤務時間</th>
+        <td>未就学クラス 10:00〜15:00</td>
+      </tr>
+      <tr>
+        {/* <th></th> */}
+        <td>放課後等デイサービス 14:30〜18:30</td>
+      </tr>
+      <tr>
+        <th>時給</th>
+        <td>1,200円〜1,500円</td>
+      </tr>
+      <tr>
+        <th>休日</th>
+        <td>日・他(12/29〜1/3休み)</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>飯塚市、嘉麻市内の教室</td>
+      </tr>
+    </table>
+
+    <table className={Styles.require}>
+      <tr>
+        <th>募集職種</th>
+        <td>障がい福祉サービス</td>
+      </tr>
+      <tr>
+        <th>応募資格</th>
+        <td>2年以上の経験者</td>
+      </tr>
+      <tr>
+        <th rowSpan='2'>勤務時間</th>
+        <td>未就学クラス 9:00〜15:00</td>
+      </tr>
+      <tr>
+        {/* <th></th> */}
+        <td>放課後等デイサービス 14:30〜18:30</td>
+      </tr>
+      <tr>
+        <th>時給</th>
+        <td>950円〜1,100円</td>
+      </tr>
+      <tr>
+        <th>休日</th>
+        <td>日・他(12/29〜1/3休み)</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>飯塚市、嘉麻市内の教室</td>
+      </tr>
+    </table>
+
+    <table className={Styles.require}>
+      <tr>
+        <th>募集職種</th>
+        <td>事務員</td>
+      </tr>
+      <tr>
+        <th>勤務時間</th>
+        <td>9:00〜16:00</td>
+      </tr>
+      <tr>
+        <th>時給</th>
+        <td>850円〜1,000円</td>
+      </tr>
+      <tr>
+        <th>休日</th>
+        <td>土日・祝・他(12/29〜1/3休み)</td>
+      </tr>
+      <tr>
+        <th>勤務地</th>
+        <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
 
