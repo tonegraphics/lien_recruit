@@ -2,15 +2,11 @@ import React from 'react';
 import Layout from '../components/layout';
 import Headline from '../components/headline';
 import Styles from '../styles/pages/recruit.module.scss';
+import Accordion from '../components/accordion';
 
-const Recruit = () => (
-  <Layout>
-    <Headline title='募集要項' />
+const Recruit = () => {
+  let table1 = (
     <table className={Styles.require}>
-      <tr>
-        <th>募集職種</th>
-        <td>児童発達支援管理者</td>
-      </tr>
       <tr>
         <th>応募資格</th>
         <td>児童発達支援管理者研修又はサービス管理責任者研修修了者、障がい福祉サービス又は保育所等の勤務3年以上の経験者</td>
@@ -40,12 +36,10 @@ const Recruit = () => (
         <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
+  );
 
+  let table2 = (
     <table className={Styles.require}>
-      <tr>
-        <th>募集職種</th>
-        <td>言語聴覚士・作業療法士・臨床心理士</td>
-      </tr>
       <tr>
         <th>内容</th>
         <td>2歳〜5歳の発達の遅れが気になるお子様の療育支援</td>
@@ -71,12 +65,10 @@ const Recruit = () => (
         <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
+  );
 
+  let table3 = (
     <table className={Styles.require}>
-      <tr>
-        <th>募集職種</th>
-        <td>保育士又は児童指導員</td>
-      </tr>
       <tr>
         <th>応募資格</th>
         <td>教諭免許又は児童福祉サービス2年以上経験者等</td>
@@ -106,12 +98,10 @@ const Recruit = () => (
         <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
+  );
 
+  let table4 = (
     <table className={Styles.require}>
-      <tr>
-        <th>募集職種</th>
-        <td>保育士(パート)</td>
-      </tr>
       <tr>
         <th rowSpan='2'>勤務時間</th>
         <td>未就学クラス 10:00〜15:00</td>
@@ -133,12 +123,10 @@ const Recruit = () => (
         <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
+  );
 
+  let table5 = (
     <table className={Styles.require}>
-      <tr>
-        <th>募集職種</th>
-        <td>障がい福祉サービス</td>
-      </tr>
       <tr>
         <th>応募資格</th>
         <td>2年以上の経験者</td>
@@ -164,7 +152,9 @@ const Recruit = () => (
         <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
+  );
 
+  let table6 = (
     <table className={Styles.require}>
       <tr>
         <th>募集職種</th>
@@ -187,8 +177,36 @@ const Recruit = () => (
         <td>飯塚市、嘉麻市内の教室</td>
       </tr>
     </table>
+  );
 
-    <Headline title='1日の仕事の流れ' />
+  const require = [
+    {
+      title: '児童発達支援管理者',
+      table: table1
+    },
+    {
+      title: '言語聴覚士・作業療法士・臨床心理士',
+      table: table2
+    },
+    {
+      title: '保育士又は児童指導員',
+      table: table3
+    },
+    {
+      title: '保育士(パート)',
+      table: table4
+    },
+    {
+      title: '障がい福祉サービス',
+      table: table5
+    },
+    {
+      title: '事務員',
+      table: table6
+    }
+  ]
+
+  let timetable1 = (
     <table className={Styles.timetable}>
       <tr>
         <th></th>
@@ -271,7 +289,9 @@ const Recruit = () => (
         <td></td>
       </tr>
     </table>
+  );
 
+  let timetable2 = (
     <table className={Styles.timetable}>
       <tr>
         <th></th>
@@ -334,9 +354,30 @@ const Recruit = () => (
         <td></td>
       </tr>
     </table>
+  );
 
 
-  </Layout>
-)
+  const timetable = [
+    {
+      title: '未就学クラス',
+      table: timetable1
+    },
+    {
+      title: '放課後等デイサービス',
+      table: timetable2
+    }
+  ]
+
+  return (
+    <Layout> 
+      <Headline title='募集要項' />
+      <Accordion data={require} />
+
+      <Headline title='1日の仕事の流れ' />
+      <Accordion data={timetable} />
+    </Layout>
+  )
+  
+}
 
 export default Recruit
