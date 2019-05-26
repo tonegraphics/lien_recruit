@@ -6,9 +6,9 @@ const Footer = () => (
     <div className={Styles.top}>
       <p>まずはお気軽にお問い合わせ下さい！</p>
       <div className={Styles.top__link}>
-        <a className={Styles.line} href="#">LINE@</a>
+        {/* <a className={Styles.line} href="#">LINE@</a> */}
         <a className={Styles.tel} href="tel:0948-26-8700">Tel: 0948-26-8700</a>
-        <a className={Styles.mail} href="#">Mail</a>
+        <a className={Styles.mail} href="https://ws.formzu.net/dist/S57550451/" target="_blank">フォーム</a>
       </div>
     </div>
     <div className={Styles.under}>
