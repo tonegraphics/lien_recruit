@@ -31,7 +31,7 @@ $lightWhite: lighten($color: $white, $amount: 50%);
       max-height: 100rem;
       transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
       transition-duration: 0.5s;
-      transition: max-height;
+      transition-property: max-height;
     }
     
     #{ $self }__content{
@@ -40,7 +40,7 @@ $lightWhite: lighten($color: $white, $amount: 50%);
       transition-delay: 0.2s;
       transition-timing-function: ease-in-out;
       transition-duration: 0.2s;
-      transition: opacity, transform;
+      transition-property: opacity, transform;
     }
   }
 
@@ -76,7 +76,7 @@ $lightWhite: lighten($color: $white, $amount: 50%);
     overflow: hidden;
     text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
     transition-duration: 0.5s;
-    transition: max-height;
+    transition-property: max-height;
     position: relative;
   }
   
@@ -85,7 +85,7 @@ $lightWhite: lighten($color: $white, $amount: 50%);
     transform: translateY(-1rem);
     transition-timing-function: linear, ease;
     transition-duration: 0.1s;
-    transition: opacity, transform;
+    transition-property: opacity, transform;
     transition-delay: 0.5s;
     padding: 0.5rem 1rem 1rem;
   }
