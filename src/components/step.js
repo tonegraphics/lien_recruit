@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import Styles from "../styles/components/step.module.scss"
 import classNames from "classnames"
