@@ -1,0 +1,10 @@
+@import "../variable/_variables.scss";
+
+.headline {
+  text-align: center;
+  margin: 10vh 0 4vh;
+  h1 {
+    display: inline-block;
+    border-bottom: 8px solid $main;
+  }
+}
