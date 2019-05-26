@@ -1,0 +1,86 @@
+@import '../variable/variables';
+
+.openMenu {
+    z-index: 5;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.7s;
+}
+
+.closeMenu {
+    z-index: 5;
+    position: absolute;
+    top: -1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.7s;
+}
+
+.listItem {
+    width: calc(100% - 96px);
+    height: 80px;
+    font-size: 1rem;
+    background-color: rgba(lighten($color: $black, $amount: 50), 0.8);
+    text-align: left;
+    border-bottom: 2px solid $white;
+}
+
+.link {
+    display: inline-block;
+    width: 100%;
+    padding-left: 40px;
+    height: 100%;
+    line-height: 80px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+    &:hover {
+        color: $black;
+        background-color: $accent;
+        transition: 0.5s;
+    }
+    
+}
+
+.disAppear {
+    display: none;
+}
+
+.slideButton {
+    position: absolute;
+    left: calc(100% - 96px);
+    width: 96px;
+    z-index: 5;
+    background-color: $white;
+    color: $main;
+    height: 56px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.7s;
+    border-bottom: 8px solid lighten($color: $black, $amount: 50);
+    &:active {
+        top: 0;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .openMenu, .closeMenu, .slideButton {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .openMenu, .closeMenu, .slideButton.slideButton {
+        position: fixed;
+    }
+}
+

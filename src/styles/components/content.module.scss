@@ -1,0 +1,29 @@
+@import "../variable/_variables.scss";
+
+.content {
+  width: 300px;
+  margin: 12px;
+  text-decoration: none;
+  color: $black;
+
+  h3 {
+    text-align: center;
+    color: $main;
+    margin: 8px 0;
+    &:visited {
+      color: $main;
+    }
+  }
+  p {
+    width: 300px;
+    margin: 0 auto 1.45rem;
+  }
+  &:visited {
+    color: $black;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+}

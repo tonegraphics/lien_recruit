@@ -1,0 +1,33 @@
+@import '../variable/variables';
+
+.top {
+    &__text {
+        text-align: center;
+    }
+    &__images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__image {
+            width: 480px;
+            padding: 8px;
+        }
+    }
+}
+
+.briefing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__text {
+        width: 480px;
+        padding: 8px;
+        a {
+            color: darken($color: $main, $amount: 20);
+        }
+    }
+    &__image {
+        width: 480px;
+        padding: 8px;
+    }
+}
