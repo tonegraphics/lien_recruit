@@ -1,65 +1,66 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Styles from "../styles/components/header.module.scss"
 import classNames from "classnames"
 import SlideMenu from "./slideMenu";
 
-const baseLink = "http://localhost:8000";
-
 var contents = [
   {
     title: "りあん",
-    link: "/",
+    link: "",
   },
   {
     title: "未来の保育士さんへ",
-    link: "/message",
+    link: "message",
   },
   {
     title: "スタッフインタビュー",
-    link: "/interview",
+    link: "interview",
   },
   {
     title: "教室紹介",
-    link: "/classrooms",
+    link: "classrooms",
   },
   {
     title: "見学",
-    link: "/visit"
+    link: "visit"
   },
   {
     title: "制度",
-    link: "/welfare",
+    link: "welfare",
   },
   {
     title: "募集要項",
-    link: "/recruit",
+    link: "recruit",
   },
 ];
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.url = window.location.href;
+    this.splitedUrl = window.location.href.split('/');
     this.contents = contents;
   }
 
-  FixedStaffUrl(url) {
-    const interviewLink = baseLink + this.contents[2].link
-    console.log(url.slice(0, -2));
-    if (url.slice(0, -2) === interviewLink) {
-      return interviewLink;
-    } else {
-      return url;
+  // array[-1] が効かないンゴ...
+  tailOf(number) {
+    return this.splitedUrl[this.splitedUrl.length - number];
+  }
+
+  fixedStaffUrl() {
+    const subLink = this.tailOf(2);
+    if (subLink === "interview") {
+      return subLink;
     }
+    return " ";
   }
   
   // コンポーネントの読み込み時に実行される
   componentWillMount() {
+    const link = this.tailOf(1);
+    const subLink = this.fixedStaffUrl();
     this.contents.map((content) => {
-      const realLink = baseLink + content.link;
-      if( realLink === this.url || realLink === this.FixedStaffUrl(this.url)) {
+      if (link === content.link || subLink === content.link ) {
         content.classes = classNames(
           Styles.listItem,
           Styles.current
@@ -70,7 +71,6 @@ class Header extends React.Component {
         );
       }
     });
-    console.log(this.contents);
   }
 
   hero() {
@@ -84,10 +84,11 @@ class Header extends React.Component {
   }
 
   headerImage() {
+    const link = this.tailOf(1);
     var headerIamge = (
       <div className={Styles.firstImage}></div>
     );
-    if(this.url === baseLink + this.contents[0].link) {
+    if(link === this.contents[0].link) {
       headerIamge = (
         <div className={Styles.homeImage}>
           <div className={Styles.homeImage__message}>
@@ -95,7 +96,7 @@ class Header extends React.Component {
           </div>
         </div>
       );
-    } else if(this.url === baseLink + this.contents[3].link || this.url === baseLink + this.contents[4].link) {
+    } else if(link === this.contents[3].link || link === this.contents[4].link) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );
