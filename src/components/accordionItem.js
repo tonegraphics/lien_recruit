@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/components/accordion.scss';
-import Styles from '../styles/components/accordion.module.scss';
+// import Styles from '../styles/components/accordion.module.scss';
 
 class AccordionItem extends React.Component {
   state = {
