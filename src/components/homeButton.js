@@ -13,7 +13,7 @@ class HomeButton extends React.Component {
       }
 
     render() {
-        if (this.tailOf(1) !== "") {
+        if (this.splitedUrl.findIndex(item => item === "message" || item === "interview" || item === "classrooms" || item === "visit" || item === "welfare" || item === "recruit") !== -1) {
             return (
                 <Link to={this.homeLink} className={Styles.homeButton}>Home</Link>
             );

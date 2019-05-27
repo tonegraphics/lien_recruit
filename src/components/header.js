@@ -3,7 +3,6 @@ import React from "react"
 import Styles from "../styles/components/header.module.scss"
 import classNames from "classnames"
 import SlideMenu from "./slideMenu";
-import { type } from "os";
 
 var contents = [
   {
@@ -41,37 +40,37 @@ class Header extends React.Component {
     super(props);
     this.splitedUrl = typeof window !== 'undefined' && window.location.href.split('/');
     this.contents = contents;
+    this.setMenuClass();
   }
 
-  // array[-1] が効かないンゴ...
-  tailOf(number) {
-    return this.splitedUrl[this.splitedUrl.length - number];
-  }
-
-  fixedStaffUrl() {
-    const subLink = this.tailOf(2);
-    if (subLink === "interview") {
-      return subLink;
-    }
-    return " ";
-  }
-  
-  // コンポーネントの読み込み時に実行される
-  componentWillMount() {
-    const link = this.tailOf(1);
-    const subLink = this.fixedStaffUrl();
-    this.contents.map((content) => {
-      if (link === content.link || subLink === content.link ) {
+  setMenuClass() {
+    var rootLessContents = this.contents.slice(1);
+    var findCurrent = false;
+    console.log(this.contents);
+    rootLessContents.map((content) => {
+      if (this.splitedUrl.findIndex(item => item === content.link) !== -1) {
         content.classes = classNames(
           Styles.listItem,
           Styles.current
         );
+        findCurrent = true;
       } else {
         content.classes = classNames(
           Styles.listItem
         );
       }
-    });
+    })
+    if (!findCurrent) {
+      this.contents[0].classes = classNames(
+        Styles.listItem,
+        Styles.current
+      );
+    } else {
+      this.contents[0].classes = classNames(
+        Styles.listItem
+      );
+    }
+    console.log(this.contents);
   }
 
   hero() {
@@ -85,19 +84,18 @@ class Header extends React.Component {
   }
 
   headerImage() {
-    const link = this.tailOf(1);
     var headerIamge = (
-      <div className={Styles.firstImage}></div>
-    );
-    if(link === this.contents[0].link) {
-      headerIamge = (
-        <div className={Styles.homeImage}>
-          <div className={Styles.homeImage__message}>
-            <strong>夢と誇りを持てる<br />社会のために</strong>
-          </div>
+      <div className={Styles.homeImage}>
+        <div className={Styles.homeImage__message}>
+          <strong>夢と誇りを持てる<br />社会のために</strong>
         </div>
+      </div>
+    );
+    if (this.splitedUrl.findIndex(item => item === "message" || item === "interview" || item === "classrooms") !== -1) {
+      headerIamge = (
+        <div className={Styles.firstImage}></div>
       );
-    } else if(link === this.contents[3].link || link === this.contents[4].link) {
+    } else if(this.splitedUrl.findIndex(item => item === "visit" || item === "welfare" || item === "recruit") !== -1) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );
