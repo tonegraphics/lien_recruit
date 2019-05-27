@@ -29,7 +29,7 @@ var contents = [
     },
     {
       title: "募集要項",
-      link: "recruit",
+      link: "employment",
     },
   ];
 
