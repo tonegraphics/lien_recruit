@@ -46,13 +46,15 @@ class HomeButton extends React.Component {
 
     isIn(array, word) {
         var result = false;
-        array.map((item) => {
-          if (item === word) {
-            console.log(item);
-            result =  true;
-          }
-        });
-        return result;
+        var splitedUrl = (typeof window !== 'undefined' && window.location.href).toString();
+    
+        return splitedUrl.match(word);
+        // splitedUrl.forEach((item) => {
+        //   if (item === word) {
+        //     result = true;
+        //   }
+        // });
+        // return result;
     }
 
     render() {
