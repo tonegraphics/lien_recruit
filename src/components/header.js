@@ -43,12 +43,23 @@ class Header extends React.Component {
     this.setMenuClass();
   }
 
+  isIn(array, word) {
+    var result = false;
+    array.map((item) => {
+      if (item === word) {
+        console.log(item);
+        result =  true;
+      }
+    });
+    return result;
+  }
+
   setMenuClass() {
     var rootLessContents = this.contents.slice(1);
     var findCurrent = false;
-    console.log(this.contents);
     rootLessContents.map((content) => {
-      if (this.splitedUrl.findIndex(item => item === content.link) !== -1) {
+      const result = this.isIn(this.splitedUrl, content.link);
+      if (result) {
         content.classes = classNames(
           Styles.listItem,
           Styles.current
@@ -70,7 +81,6 @@ class Header extends React.Component {
         Styles.listItem
       );
     }
-    console.log(this.contents);
   }
 
   hero() {
@@ -91,11 +101,14 @@ class Header extends React.Component {
         </div>
       </div>
     );
-    if (this.splitedUrl.findIndex(item => item === "message" || item === "interview" || item === "classrooms") !== -1) {
+    var url = this.splitedUrl;
+    const result1 = this.isIn(this.splitedUrl, this.contents[1].link) || this.isIn(this.splitedUrl, this.contents[2].link) || this.isIn(this.splitedUrl, this.contents[3].link);
+    const result2 = this.isIn(this.splitedUrl, this.contents[4].link) || this.isIn(this.splitedUrl, this.contents[5].link) || this.isIn(this.splitedUrl, this.contents[6].link);
+    if (result1) {
       headerIamge = (
         <div className={Styles.firstImage}></div>
       );
-    } else if(this.splitedUrl.findIndex(item => item === "visit" || item === "welfare" || item === "recruit") !== -1) {
+    } else if(result2) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );
