@@ -7,7 +7,7 @@ const baseLink = "http://localhost:8000";
 class HomeButton extends React.Component {
     constructor(props) {
         super(props);
-        this.url = window.location.href;
+        this.url = typeof window !== 'undefined' && window.location.href;
         this.homeLink = "/";
         console.log(this.url);
     }

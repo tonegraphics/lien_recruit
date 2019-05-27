@@ -3,6 +3,7 @@ import React from "react"
 import Styles from "../styles/components/header.module.scss"
 import classNames from "classnames"
 import SlideMenu from "./slideMenu";
+import { type } from "os";
 
 var contents = [
   {
@@ -38,7 +39,7 @@ var contents = [
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.splitedUrl = window.location.href.split('/');
+    this.splitedUrl = typeof window !== 'undefined' && window.location.href.split('/');
     this.contents = contents;
   }
 
