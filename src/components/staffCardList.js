@@ -1,6 +1,5 @@
 import React from 'react';
 import StaffCard from './staffCard';
-// import Styles from '../styles/components/staffCardList.module.scss';
 
 const StaffCardList = () => {
   const staffCardItem =[

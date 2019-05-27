@@ -6,7 +6,7 @@ import SlideMenu from "./slideMenu";
 
 var contents = [
   {
-    title: "りあん",
+    title: "トップ",
     link: "",
   },
   {
@@ -22,12 +22,12 @@ var contents = [
     link: "classrooms",
   },
   {
-    title: "見学",
-    link: "visit"
-  },
-  {
     title: "制度",
     link: "welfare",
+  },
+  {
+    title: "見学",
+    link: "visit"
   },
   {
     title: "募集要項",
@@ -59,6 +59,7 @@ class Header extends React.Component {
   componentWillMount() {
     const link = this.tailOf(1);
     const subLink = this.fixedStaffUrl();
+    // eslint-disable-next-line
     this.contents.map((content) => {
       if (link === content.link || subLink === content.link ) {
         content.classes = classNames(
@@ -96,7 +97,7 @@ class Header extends React.Component {
           </div>
         </div>
       );
-    } else if(link === this.contents[3].link || link === this.contents[4].link) {
+    } else if(link === this.contents[5].link || link === this.contents[6].link) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );
