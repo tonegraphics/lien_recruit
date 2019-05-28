@@ -7,7 +7,7 @@ import Question from './question';
 import { Link } from 'gatsby';
 
 const Staff = ({ pageContext: { path, name, job, image, profile, question, answer} }) => (
-  <Layout>
+  <Layout url={"interview"}>
     <Headline title='PROFILE' />
     <div className={Styles.profile}>
       <div className={Styles.image}>

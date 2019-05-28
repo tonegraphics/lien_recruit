@@ -7,9 +7,8 @@ import Headline from "../components/headline";
 import ContentsList from "../components/contentsList";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout url={""}>
     <SEO title="Home" />
-    <Headline title="INFORMATION" />
     <Headline title="CONTENTS" />
     <ContentsList />
   </Layout>

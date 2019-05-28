@@ -8,7 +8,7 @@ import StaffCardList from "../components/staffCardList";
 
 
 const InterviewPage = () => (
-  <Layout>
+  <Layout url={"interview"}>
     <SEO title="Interview" />
     <Headline title="STAFF INTERVIEW" />
     <StaffCardList />
