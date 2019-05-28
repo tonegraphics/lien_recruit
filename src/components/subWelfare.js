@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from '../styles/components/subwelfare.module.scss';
+import Styles from '../styles/components/subWelfare.module.scss';
 
 class Subwelfare extends React.Component {
     constructor(props) {
