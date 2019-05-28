@@ -7,7 +7,6 @@ class Classroom extends React.Component {
         super(props);
         this.name = props.name;
         this.images = props.images;
-        console.log(this.images[0]);
     }
 
     render() {

@@ -30,7 +30,7 @@ const subWalfareItems = [
 ];
 
 const WelfarePage = () => (
-  <Layout>
+  <Layout url={"welfare"}>
     <SEO title="社内制度" />
     <Headline title="社内制度" />
     <WelfareList />

@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import Styles from '../styles/pages/message.module.scss';
 
 const Message = () => (
-  <Layout>
+  <Layout url={"message"}>
     <SEO title='未来の保育士さんへ' />
     <Headline title='MESSAGE' />
     <div className={Styles.container} >

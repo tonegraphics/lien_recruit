@@ -38,30 +38,15 @@ var contents = [
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.splitedUrl = window.location.href.split('/');
+
+    this.url = this.props.url;
     this.contents = contents;
+    this.setMenuClass();
   }
 
-  // array[-1] が効かないンゴ...
-  tailOf(number) {
-    return this.splitedUrl[this.splitedUrl.length - number];
-  }
-
-  fixedStaffUrl() {
-    const subLink = this.tailOf(2);
-    if (subLink === "interview") {
-      return subLink;
-    }
-    return " ";
-  }
-  
-  // コンポーネントの読み込み時に実行される
-  componentWillMount() {
-    const link = this.tailOf(1);
-    const subLink = this.fixedStaffUrl();
-    // eslint-disable-next-line
+  setMenuClass() {
     this.contents.map((content) => {
-      if (link === content.link || subLink === content.link ) {
+      if (content.link === this.url) {
         content.classes = classNames(
           Styles.listItem,
           Styles.current
@@ -85,19 +70,18 @@ class Header extends React.Component {
   }
 
   headerImage() {
-    const link = this.tailOf(1);
     var headerIamge = (
-      <div className={Styles.firstImage}></div>
-    );
-    if(link === this.contents[0].link) {
-      headerIamge = (
-        <div className={Styles.homeImage}>
-          <div className={Styles.homeImage__message}>
-            <strong>夢と誇りを持てる<br />社会のために</strong>
-          </div>
+      <div className={Styles.homeImage}>
+        <div className={Styles.homeImage__message}>
+          <strong>夢と誇りを持てる<br />社会のために</strong>
         </div>
+      </div>
+    );
+    if (this.url === this.contents[1].link || this.url === this.contents[2].link || this.url === this.contents[3].link) {
+      headerIamge = (
+        <div className={Styles.firstImage}></div>
       );
-    } else if(link === this.contents[5].link || link === this.contents[6].link) {
+    } else if (this.url === this.contents[4].link || this.url === this.contents[5].link || this.url === this.contents[6].link) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );

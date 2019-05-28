@@ -2,24 +2,20 @@ import { Link } from "gatsby"
 import React from "react"
 import Styles from "../styles/components/homeButton.module.scss"
 
-const baseLink = "http://localhost:8000";
-
 class HomeButton extends React.Component {
     constructor(props) {
         super(props);
-        this.url = window.location.href;
-        this.homeLink = "/";
-        console.log(this.url);
+        this.url = this.props.url;
     }
+
     render() {
-        if (this.url !== baseLink + this.homeLink) {
+        if (this.url !== "") {
             return (
                 <Link to={this.homeLink} className={Styles.homeButton}>Home</Link>
             );
         } else {
             return (<div></div>);
         }
-        
     }
 }
 
