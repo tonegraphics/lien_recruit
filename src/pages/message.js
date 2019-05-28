@@ -5,7 +5,7 @@ import Headline from '../components/headline';
 import Styles from '../styles/pages/message.module.scss';
 
 const Message = () => (
-  <Layout>
+  <Layout url={"message"}>
     <Headline title='MESSAGE' />
     <div className={Styles.container} >
       <div className={Styles.message}>

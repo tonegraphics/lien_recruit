@@ -15,7 +15,7 @@ import HomeButton from "./homeButton"
 import "./layout.css"
 
 
-const Layout = ({ children }) => (
+const Layout = ({ children, url }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header />
+        <Header url={url}/>
         <div
           style={{
             margin: `0 auto`,
@@ -37,8 +37,8 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-        <HomeButton />
-          <main>{children}</main>
+        <HomeButton url={url}/>
+        <main>{children}</main>
         </div>
         <Footer />
       </>

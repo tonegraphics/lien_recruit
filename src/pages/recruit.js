@@ -369,7 +369,7 @@ const Recruit = () => {
   ]
 
   return (
-    <Layout> 
+    <Layout url={"recruit"}> 
       <Headline title='募集要項' />
       <Accordion data={require} />
 

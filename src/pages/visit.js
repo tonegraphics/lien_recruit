@@ -9,7 +9,7 @@ import Image from '../components/image';
 
 
 const VisitPage = () => (
-  <Layout>
+  <Layout url={"visit"}>
     <SEO title="Visit" />
     <Headline title="見学におこし下さい" />
     <div className={Styles.top}>

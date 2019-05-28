@@ -31,62 +31,32 @@ var contents = [
   },
   {
     title: "募集要項",
-    link: "employment",
+    link: "recruit",
   },
 ];
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.splitedUrl = typeof window !== 'undefined' && window.location.href.split('/');
+
+    this.url = this.props.url;
     this.contents = contents;
     this.setMenuClass();
   }
 
-  isIn(array, word) {
-    var result = false;
-    var splitedUrl = (typeof window !== 'undefined' && window.location.href).toString();
-
-    return splitedUrl.match(word);
-    // splitedUrl.forEach((item) => {
-    //   if (item === word) {
-    //     result = true;
-    //   }
-    // });
-    // return result;
-  }
-
-  tailOf(number) {
-    return this.splitedUrl[this.splitedUrl.length - number];
-  }
-
   setMenuClass() {
-    var rootLessContents = this.contents.slice(1);
-    var findCurrent = false;
-    rootLessContents.map((content) => {
-      const result = this.isIn(this.splitedUrl, content.link);
-      if (result) {
+    this.contents.map((content) => {
+      if (content.link === this.url) {
         content.classes = classNames(
           Styles.listItem,
           Styles.current
         );
-        findCurrent = true;
       } else {
         content.classes = classNames(
           Styles.listItem
         );
       }
     });
-    if (!findCurrent) {
-      this.contents[0].classes = classNames(
-        Styles.listItem,
-        Styles.current
-      );
-    } else {
-      this.contents[0].classes = classNames(
-        Styles.listItem
-      );
-    }
   }
 
   hero() {
@@ -107,14 +77,11 @@ class Header extends React.Component {
         </div>
       </div>
     );
-    var url = this.splitedUrl;
-    const result1 = this.isIn(this.splitedUrl, this.contents[1].link) || this.isIn(this.splitedUrl, this.contents[2].link) || this.isIn(this.splitedUrl, this.contents[3].link);
-    const result2 = this.isIn(this.splitedUrl, this.contents[4].link) || this.isIn(this.splitedUrl, this.contents[5].link) || this.isIn(this.splitedUrl, this.contents[6].link);
-    if (result1) {
+    if (this.url === this.contents[1].link || this.url === this.contents[2].link || this.url === this.contents[3].link) {
       headerIamge = (
         <div className={Styles.firstImage}></div>
       );
-    } else if(result2) {
+    } else if (this.url === this.contents[4].link || this.url === this.contents[5].link || this.url === this.contents[6].link) {
       headerIamge = (
         <div className={Styles.secondImage}></div>
       );
