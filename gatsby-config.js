@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/lien_recruit_k",
+  pathPrefix: "/lien_recruit",
   siteMetadata: {
     title: `りあん RECRUIT`,
     description: `飯塚市・嘉麻市にて児童発達支援や放課後等デイサービスを行う株式会社Lienの求人情報サイトです。`,
