@@ -1,11 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import WelfareItem from './welfareItem';
 import Styles from '../styles/components/welfareList.module.scss';
 
 const WelfareList = () => {
   const contents = [
-    // CEOの画像がないので仮置き
     {
       image: 'welfare01.jpg',
       title: '新入社員研修',

@@ -10,7 +10,7 @@ import Image from '../components/image';
 
 const VisitPage = () => (
   <Layout>
-    <SEO title="Visit" />
+    <SEO title="見学" />
     <Headline title="見学におこし下さい" />
     <div className={Styles.top}>
         <p className={Styles.top__text}>
@@ -34,7 +34,7 @@ const VisitPage = () => (
             <p> 
                 説明会では、会社概要や仕事内容などの説明、個別の質問にもお答えさせていただきます。
                 日程については、ご希望に合わせ調整をさせていただきますので、ご応募を検討されている方も、お気軽にご連絡下さい。
-                説明会への参加をご希望の方は、<a href="https://ws.formzu.net/dist/S57550451/" target="_blank">お問い合わせフォーム</a>よりお問い合わせをお待ちしております。
+                説明会への参加をご希望の方は、<a href="https://ws.formzu.net/dist/S57550451/" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>よりお問い合わせをお待ちしております。
 
             </p>
         </div>   

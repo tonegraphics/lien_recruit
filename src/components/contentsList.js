@@ -1,11 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import Content from './content';
 import Styles from '../styles/components/contentsList.module.scss';
 
 const ContentsList = () => {
   const contents = [
-    // CEOの画像がないので仮置き
     {
       image: 'contents01.jpg',
       title: '未来の保育士さんへ',
