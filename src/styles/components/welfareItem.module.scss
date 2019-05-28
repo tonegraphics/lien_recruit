@@ -1,11 +1,11 @@
 @import "../variable/_variables.scss";
 
 .welfare {
-  width: 300px;
-  margin: 8px;
+  width: 480px;
+  margin: 12px;
 
   .image {
-    width: 300px;
+    width: 480px;
   }
   
   h3 {
@@ -14,7 +14,20 @@
     margin: 8px 0;
   }
   p {
-    width: 300px;
+    width: 480px;
     margin: 0 auto 1.45rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .welfare {
+    width: 340px;
+    margin: 8px;
+    .image {
+      width: 340px;
+    }
+    p {
+      width: 340px;
+    }
   }
 }
