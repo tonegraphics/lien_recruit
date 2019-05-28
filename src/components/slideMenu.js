@@ -5,31 +5,31 @@ import Style from "../styles/components/slideMenu.module.scss"
 var contents = [
   {
     title: "りあん",
-    link: "/",
+    link: "",
   },
   {
     title: "未来の保育士さんへ",
-    link: "/message",
+    link: "message",
   },
   {
     title: "スタッフインタビュー",
-    link: "/interview",
+    link: "interview",
   },
   {
     title: "教室紹介",
-    link: "/classrooms",
+    link: "classrooms",
   },
   {
     title: "見学",
-    link: "/visit"
+    link: "visit"
   },
   {
     title: "制度",
-    link: "/welfare",
+    link: "welfare",
   },
   {
     title: "募集要項",
-    link: "/recruit",
+    link: "recruit",
   },
 ];
 

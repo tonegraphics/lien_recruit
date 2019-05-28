@@ -24,7 +24,7 @@ const classroomInfo = [
 ];
 
 const ClassroomsPage = () => (
-  <Layout>
+    <Layout url={"classrooms"}>
     <SEO title="教室紹介" />
     <Headline title="教室紹介" />
     { classroomInfo.map((info) => (
