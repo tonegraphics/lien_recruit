@@ -55,6 +55,10 @@
 }
 
 .slideButton {
+    outline: none;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+    appearance: none;
     position: absolute;
     left: calc(100% - 96px);
     width: 96px;
