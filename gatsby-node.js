@@ -6,9 +6,10 @@
 
 // You can delete this file if you're not using it
 const path = require("path");
+
 const interviews = [
   {
-    path: 'interview/1',
+    url: 'interview/1',
     name: '林 愛子',
     job: 'ことね教室 自閉症セラピスト',
     image: 'staff01.png',
@@ -21,7 +22,7 @@ const interviews = [
     ]
   },
   {
-    path: 'interview/2',
+    url: 'interview/2',
     name: '福田　恵莉',
     job: 'ことね教室 保育士',
     image: 'staff02.png',
@@ -34,7 +35,7 @@ const interviews = [
     ]
   },
   {
-    path: 'interview/3',
+    url: 'interview/3',
     name: '安河内 望月',
     job: '西徳前教室 保育士',
     image: 'staff03.png',
@@ -47,7 +48,7 @@ const interviews = [
     ]
   },
   {
-    path: 'interview/4',
+    url: 'interview/4',
     name: '宮田 佳香',
     job: '西徳前教室 作業療法士',
     image: 'staff04.png',
@@ -69,12 +70,11 @@ exports.createPages = ({ graphql, actions }) => {
     interviews.forEach(interview =>
       createPage({
         // Path name
-        path: interview.path,
+        path: interview.url,
         // Component
         component: path.resolve(`src/templates/staff.js`),
         // Variables are given for Component
         context: {
-          path: interview.path,
           name: interview.name,
           job: interview.job,
           image: interview.image,

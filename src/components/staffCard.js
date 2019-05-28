@@ -9,7 +9,7 @@ const StaffCard = ({id, number, name, job, word, image}) => {
 
   let cardClass = classNames(Styles.card);
 
-  if (id % 2 == 0) {
+  if (id % 2 === 0) {
     cardClass = classNames(
       Styles.card,
       Styles.reverse

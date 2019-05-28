@@ -6,7 +6,7 @@ import SlideMenu from "./slideMenu";
 
 var contents = [
   {
-    title: "りあん",
+    title: "トップ",
     link: "",
   },
   {
@@ -22,12 +22,12 @@ var contents = [
     link: "classrooms",
   },
   {
-    title: "見学",
-    link: "visit"
-  },
-  {
     title: "制度",
     link: "welfare",
+  },
+  {
+    title: "見学",
+    link: "visit"
   },
   {
     title: "募集要項",
